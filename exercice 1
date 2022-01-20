@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Rectangle {
+    
+    public int a,b;
+   
+    public int surface(){
+        return a*b;
+    }
+}
+
+public class Test{
+     public static void main(String []args){
+         
+        Rectangle rectangle = new Rectangle();
+        
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Entrez la largeur(a) du rectangle :");
+        rectangle.a = in.nextInt();
+
+        System.out.println("Entrez la longueur(b) du rectangle :");
+        rectangle.b = in.nextInt();
+
+        System.out.println("Surface : "+ rectangle.surface());
+        
+        in.close(); 
+     }
+}
