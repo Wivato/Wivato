@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Student {
+  
+  public String nom;
+  public int note1, note2;
+  
+  Student(String nom, int note1, int note2){
+    this.nom = nom;
+    this.note1 = note1;
+    this.note2 = note2;
+  }
+  
+  public int calc_moy(){
+    return (note1 + note2)/2;
+  }
+  
+  public void show(){
+    System.out.println("Étudiant: "+ nom +" \n moyenne: "+ calc_moy());
+  }
+}
+
+public class Main{
+     public static void main(String []args){
+
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Entrez le nom: ");
+        String nom = in.nextLine();
+
+        System.out.println("Entrez les notes de deux matiéres: ");
+        int note1 = in.nextInt();
+        int note2 = in.nextInt();
+
+        Student s = new Student(nom, note1, note2);
+
+        s.show();
+        
+        in.close(); 
+     }
+}
